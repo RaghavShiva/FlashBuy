@@ -1,26 +1,24 @@
-STILL WORKING
-WORK IN PROGRESS
-# Features :
+<h1 align="center">
+    FLASHBUY: Ecommerce Site
+</h1>
 
-- Basic E-commerce Features- Product lists, Product Details, Cart, Checkout
-- Secure Card Payments / Cash payments
-- Admin Panel - Add/Edit Orders. Add/Edit Products
-- Sorting, Filtering,and Pagination queries using Mongoose
-- Authentication with Passport JS strategies
-- Order Emails, Reset Password Emails
-- User Profile and user orders
-  
-# Technical Details :
-- React 18 with Tailwind CSS
-- Redux Toolkit with Async Thunk
-- React Router v6
-- JSON-server for front-end testing
-- MongoDB for Database
-- Mongoose v7 as ODM
-- REST API using Express
-- Authentication using Passport JS
-- API Authentication using Passport JWT
-- MongoDB Atlas cloud database
-- Vercel Server deployment
-- Email using Nodemailer - using GMail SMTP system
-- Payments using Stripe - PaymentIntent based custom flow
+<h3 align="center">
+Seamless shopping, search and explore different product categories, add products to cart, and checkout swiftly. <br>
+Become a seller and add products, monitor sales, and gather customer feedback.
+</h3>
+
+## Features
+
+- **User Registration:** FlashBuy allows users to register as customers or sellers, enabling a tailored shopping experience.
+
+- **Cart System:** Customers can add products to their cart for easy checkout. The cart allows them to review and manage their selections before completing the purchase.
+
+- **Product Search:** FlashBuy offers search functionality where customers can find products by name or browse through categories such as Electronics, Clothes, Kitchen, and more.
+
+- **Reviews and Ratings:** Customers can leave reviews and ratings (out of 5) for products they've purchased, providing valuable feedback for sellers and building trust within the community.
+
+- **Seller Dashboard:** Sellers have access to a dedicated dashboard where they can manage their products, view sales data, and gain insights into their store's performance through data visualization.
+
+- **Product Management:** Sellers can add products with detailed information and set their prices. They can also check which customers have added their products to their carts.
+
+- **Order Tracking:** Sellers can monitor the products ordered by customers, helping them stay organized and fulfill orders efficiently.
