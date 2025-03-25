@@ -7,9 +7,11 @@ import { getProducts } from '../redux/userHandle';
 import ProductsMenu from './customer/components/ProductsMenu';
 import { NewtonsCradle } from '@uiball/loaders';
 import { Link } from 'react-router-dom';
-
+import ad from '../assets/adimg.gif';
+import ad3 from '../assets/adimg3.gif'
+import ad2 from '../assets/adimg2.jpg'
+import './Home.css'
 const Home = () => {
-
   const dispatch = useDispatch();
 
   const { productData, responseProducts, error } = useSelector((state) => state.user);
@@ -74,11 +76,27 @@ const Home = () => {
                 <LeftComponent>
                   <Slide products={productData} title="Top Selection" />
                 </LeftComponent>
+                <RightComponent>
+                  <img src={ad} alt="AD" />
+                </RightComponent>
               </Component>
-
-              <Slide products={productData} title="Deals of the Day" />
+              <Component>
+                <LeftComponent>
+                  <Slide products={productData} title="Deals of the Day" />
+                </LeftComponent>
+                <RightComponent>
+                  <img src={ad2} alt="AD" />
+                </RightComponent>
+              </Component>
+              <Component>
+                <LeftComponent>
+                  <Slide products={productData} title="Discounts for You" />
+                </LeftComponent>
+                <RightComponent>
+                  <img src={ad3} alt="AD" />
+                </RightComponent>
+              </Component>
               <Slide products={productData} title="Suggested Items" />
-              <Slide products={productData} title="Discounts for You" />
               <Slide products={productData} title="Recommended Items" />
             </>
           )}
@@ -110,18 +128,17 @@ const Component = styled(Box)`
 const LeftComponent = styled(Box)(({ theme }) => ({
   width: '83%',
   [theme.breakpoints.down('md')]: {
-    width: '100%',
+    width: '70%',
   },
 }));
 
 const RightComponent = styled(Box)(({ theme }) => ({
-  marginTop: 10,
+  marginTop: 20,
   background: '#FFFFFF',
   width: '17%',
-  marginLeft: 10,
-  padding: 5,
+  padding: 2,
   textAlign: 'center',
   [theme.breakpoints.down('md')]: {
-    display: 'none',
+    width: '30%',
   },
 }));
