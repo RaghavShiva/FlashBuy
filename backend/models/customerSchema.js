@@ -18,6 +18,9 @@ const customerSchema = new mongoose.Schema({
         type: String,
         default: "Customer"
     },
+    image: {
+        type: String
+    },
     cartDetails: [{
         productName: {
             type: String

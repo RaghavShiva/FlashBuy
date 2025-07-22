@@ -14,6 +14,9 @@ const sellerSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    image: {
+        type: String
+    },
     role: {
         type: String,
         default: "Seller"
@@ -21,7 +24,7 @@ const sellerSchema = new mongoose.Schema({
     shopName: {
         type: String,
         unique: true,
-        required: true
+        sparse: true
     }
 });
 

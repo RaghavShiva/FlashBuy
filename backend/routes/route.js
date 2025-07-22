@@ -3,7 +3,9 @@ const authMiddleware = require('../middleware/authMiddleware.js');
 
 const {
     sellerRegister,
-    sellerLogIn
+    sellerLogIn,
+    googleLoginSeller,
+    updateSellerProfile
 } = require('../controllers/sellerController.js');
 
 const {
@@ -28,7 +30,8 @@ const {
     customerRegister,
     customerLogIn,
     getCartDetail,
-    cartUpdate
+    cartUpdate,
+    googleLoginCustomer
 } = require('../controllers/customerController.js');
 
 const {
@@ -41,6 +44,7 @@ const {
 // Seller
 router.post('/SellerRegister', sellerRegister);
 router.post('/SellerLogin', sellerLogIn);
+
 
 // Product
 router.post('/ProductCreate', productCreate);
@@ -68,9 +72,17 @@ router.post('/CustomerLogin', customerLogIn);
 router.get('/getCartDetail/:id', getCartDetail);
 router.put('/CustomerUpdate/:id', cartUpdate);
 
+
+
 // Order
 router.post('/newOrder', newOrder);
 router.get('/getOrderedProductsByCustomer/:id', getOrderedProductsByCustomer);
 router.get('/getOrderedProductsBySeller/:id', getOrderedProductsBySeller);
+
+
+// google auth
+router.post('/auth/googleLoginCustomer', googleLoginCustomer);
+router.post('/auth/googleLoginSeller', googleLoginSeller);
+router.post('/auth/updateSellerProfile', updateSellerProfile);
 
 module.exports = router;
