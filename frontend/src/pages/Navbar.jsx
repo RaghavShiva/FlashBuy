@@ -35,7 +35,6 @@ const Navbar = () => {
 
     React.useEffect(() => {
         if (currentRole === "Customer") {
-            console.log(currentUser);
             dispatch(updateCustomer(currentUser, currentUser._id));
         }
     }, [currentRole, currentUser, dispatch])
@@ -305,26 +304,20 @@ const Navbar = () => {
                             >
                                 <MenuItem onClick={() => navigate("/Profile")}>
                                     <Avatar />
-                                    <Link to="/Profile">
-                                        Profile
-                                    </Link>
+                                    Profile
                                 </MenuItem>
                                 <MenuItem onClick={() => navigate("/Orders")}>
                                     <ListItemIcon>
                                         <Shop2 fontSize="small" />
                                     </ListItemIcon>
-                                    <Link to="/Orders">
-                                        My Orders
-                                    </Link>
+                                    My Orders
                                 </MenuItem>
                                 <Divider />
                                 <MenuItem onClick={() => navigate("/Logout")}>
                                     <ListItemIcon>
                                         <Logout fontSize="small" />
                                     </ListItemIcon>
-                                    <Link to="/Logout">
-                                        Logout
-                                    </Link>
+                                    Logout
                                 </MenuItem>
                             </Menu>
                         </Box>

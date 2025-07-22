@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Avatar, Menu, MenuItem, ListItemIcon, Divider, IconButton, Tooltip } from '@mui/material';
 import { Logout } from '@mui/icons-material';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const AccountMenu = () => {
@@ -50,20 +50,16 @@ const AccountMenu = () => {
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-                <MenuItem onClick={() => navigate("/Profile")}>
+                <MenuItem onClick={() => navigate("/profile")}>
                     <Avatar />
-                    <Link to="/Profile">
-                        Profile
-                    </Link>
+                    Profile
                 </MenuItem>
                 <Divider />
-                <MenuItem onClick={() => navigate("/Logout")}>
+                <MenuItem onClick={() => navigate("/logout")}>
                     <ListItemIcon>
                         <Logout fontSize="small" />
                     </ListItemIcon>
-                    <Link to="/Logout">
-                        Logout
-                    </Link>
+                    Logout
                 </MenuItem>
             </Menu>
         </>

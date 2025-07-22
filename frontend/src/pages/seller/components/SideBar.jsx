@@ -21,20 +21,20 @@ const SideBar = () => {
             <React.Fragment>
                 <ListItemButton
                     component={Link} to="/"
-                    sx={(location.pathname === "/" || location.pathname === "/Seller/dashboard") ? styles.currentStyle : styles.normalStyle}
+                    sx={(location.pathname === "/" || location.pathname === "/dashboard") ? styles.currentStyle : styles.normalStyle}
                 >
                     <ListItemIcon>
-                        <WidgetsIcon sx={{ color: (location.pathname === "/" || location.pathname === "/Seller/dashboard") ? '#4d1c9c' : 'inherit' }} />
+                        <WidgetsIcon sx={{ color: (location.pathname === "/" || location.pathname === "/dashboard") ? '#4d1c9c' : 'inherit' }} />
                     </ListItemIcon>
                     <ListItemText primary="Home" />
                 </ListItemButton>
 
                 <ListItemButton
-                    component={Link} to="/Seller/products"
-                    sx={location.pathname.startsWith('/Seller/products') ? styles.currentStyle : styles.normalStyle}
+                    component={Link} to="/products"
+                    sx={location.pathname.startsWith('/products') ? styles.currentStyle : styles.normalStyle}
                 >
                     <ListItemIcon>
-                        <ShoppingCartIcon sx={{ color: location.pathname.startsWith('/Seller/products') ? '#4d1c9c' : 'inherit' }} />
+                        <ShoppingCartIcon sx={{ color: location.pathname.startsWith('/products') ? '#4d1c9c' : 'inherit' }} />
                     </ListItemIcon>
                     <ListItemText primary="Products" />
                 </ListItemButton>
@@ -63,11 +63,11 @@ const SideBar = () => {
             <Divider sx={{ my: 1 }} />
             <React.Fragment>
                 <ListItemButton
-                    component={Link} to="/Seller/profile"
-                    sx={location.pathname.startsWith('/Seller/profile') ? styles.currentStyle : styles.normalStyle}
+                    component={Link} to="/profile"
+                    sx={location.pathname.startsWith('/profile') ? styles.currentStyle : styles.normalStyle}
                 >
                     <ListItemIcon>
-                        <AccountCircleIcon sx={{ color: location.pathname.startsWith("/Seller/profile") ? '#4d1c9c' : 'inherit' }} />
+                        <AccountCircleIcon sx={{ color: location.pathname.startsWith("/profile") ? '#4d1c9c' : 'inherit' }} />
                     </ListItemIcon>
                     <ListItemText primary="Profile" />
                 </ListItemButton>

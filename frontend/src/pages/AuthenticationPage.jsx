@@ -5,9 +5,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Grid, Box, Typography, Paper, Checkbox, FormControlLabel, TextField, CssBaseline, IconButton, InputAdornment, CircularProgress } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { LightPurpleButton } from '../utils/buttonStyles';
-import { authUser } from '../redux/userHandle';
+import { authUser, googleAuth, googleLoginUser } from '../redux/userHandle';
 import styled from 'styled-components';
 import Popup from '../components/Popup';
+import jwt_decode from 'jwt-decode';
+import GoogleLogin from '../GoogleLogin';
 
 const AuthenticationPage = ({ mode, role }) => {
 
@@ -42,7 +44,6 @@ const AuthenticationPage = ({ mode, role }) => {
 
         if (mode === "Register") {
             const name = event.target.userName.value;
-
             if (!name) {
                 if (!name) setUserNameError(true);
                 return;
@@ -80,6 +81,8 @@ const AuthenticationPage = ({ mode, role }) => {
         if (name === 'shopName') setShopNameError(false);
     };
 
+
+
     useEffect(() => {
         if (status === 'success' && currentRole !== null) {
             navigate('/');
@@ -95,6 +98,7 @@ const AuthenticationPage = ({ mode, role }) => {
             setShowPopup(true)
         }
     }, [status, currentUser, currentRole, navigate, error, response]);
+
 
     return (
         <>
@@ -220,6 +224,34 @@ const AuthenticationPage = ({ mode, role }) => {
                             >
                                 {loader ? <CircularProgress size={24} color="inherit" /> : mode}
                             </LightPurpleButton>
+                            {
+                                (role === "Seller")
+                                &&
+                                <Box sx={{ mt: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                    <Typography sx={{ mb: 1 }}>or</Typography>
+
+                                    <GoogleLogin role={role} mode={mode} />
+
+                                    <Typography variant="caption" sx={{ mt: 1 }}>
+                                        Continue with Google as a {role}
+                                    </Typography>
+
+                                </Box>}
+                            {
+                                (role === "Customer")
+                                &&
+                                <Box sx={{ mt: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                    <Typography sx={{ mb: 1 }}>or</Typography>
+
+
+                                    <GoogleLogin role={role} mode={mode} />
+
+                                    <Typography variant="caption" sx={{ mt: 1 }}>
+                                        Continue with Google as a {role}
+                                    </Typography>
+
+                                </Box>
+                            }
                             <Grid container>
                                 <Grid>
                                     {mode === "Register" ?
@@ -257,13 +289,20 @@ const AuthenticationPage = ({ mode, role }) => {
                         backgroundPosition: 'center',
                     }}
                 />
-            </Grid>
+            </Grid >
             <Popup message={message} setShowPopup={setShowPopup} showPopup={showPopup} />
         </>
     );
 }
 
 export default AuthenticationPage
+
+
+// import styled from 'styled-components';
+
+
+
+
 
 const StyledLink = styled(Link)`
   margin-top: 9px;

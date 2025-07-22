@@ -144,14 +144,14 @@ const SellerDashboard = () => {
                     <Toolbar />
                     <Routes>
                         <Route path="/" element={<SellerHomePage />} />
-                        <Route path='*' element={<Navigate to="/" />} />
-                        <Route path="/Seller/dashboard" element={<SellerHomePage />} />
-                        <Route path="/Seller/profile" element={<SellerProfile />} />
+                        <Route path="*" element={<Navigate to="/" />} />
+                        <Route path="/dashboard" element={<SellerHomePage />} />
+                        <Route path="/profile" element={<SellerProfile />} />
 
                         {/* Class */}
-                        <Route path="/Seller/addproduct" element={<AddProduct />} />
-                        <Route path="/Seller/products" element={<ShowProducts />} />
-                        <Route path="/Seller/products/product/:id" element={<ViewProductSeller />} />
+                        <Route path="/addproduct" element={<AddProduct />} />
+                        <Route path="/products" element={<ShowProducts />} />
+                        <Route path="/products/product/:id" element={<ViewProductSeller />} />
 
                         {
                             currentRole === "Shopcart" &&

@@ -13,7 +13,6 @@ const Logout = () => {
 
   useEffect(() => {
     if (currentRole === "Customer") {
-      console.log(currentUser);
       dispatch(updateCustomer(currentUser, currentUser._id));
     }
   }, [currentRole, currentUser, dispatch])

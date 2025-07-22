@@ -41,7 +41,7 @@ const ShowProducts = () => {
   const actions = [
     {
       icon: <AddCardIcon color="primary" />, name: 'Add New Product',
-      action: () => navigate("/Seller/addproduct")
+      action: () => navigate("/addproduct")
     },
     {
       icon: <DeleteIcon color="error" />, name: 'Delete All Products',
@@ -55,7 +55,7 @@ const ShowProducts = () => {
   const shopcartActions = [
     {
       icon: <AddCardIcon color="primary" />, name: 'Add New Product',
-      action: () => navigate("/Seller/addproduct")
+      action: () => navigate("/addproduct")
     },
     {
       icon: <UploadIcon color="success" />, name: 'Upload New Product',
@@ -79,7 +79,7 @@ const ShowProducts = () => {
           {
             responseSellerProducts ?
               <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
-                <IndigoButton onClick={() => navigate("/Seller/addproduct")}>
+                <IndigoButton onClick={() => navigate("/addproduct")}>
                   Add Product
                 </IndigoButton>
                 <br /><br />
@@ -111,7 +111,7 @@ const ShowProducts = () => {
                               Delete
                             </DarkRedButton>
                             <BasicButton
-                              onClick={() => navigate("/Seller/products/product/" + data._id)}
+                              onClick={() => navigate("/products/product/" + data._id)}
                             >
                               View
                             </BasicButton>

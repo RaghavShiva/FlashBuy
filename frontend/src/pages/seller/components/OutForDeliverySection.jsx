@@ -61,7 +61,7 @@ const OutForDeliverySection = () => {
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
                     <GreenButton
                         variant="contained"
-                        onClick={() => navigate("/Seller/addproduct")}
+                        onClick={() => navigate("/addproduct")}
                     >
                         Add Products
                     </GreenButton>
