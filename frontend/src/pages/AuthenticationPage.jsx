@@ -5,10 +5,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Grid, Box, Typography, Paper, Checkbox, FormControlLabel, TextField, CssBaseline, IconButton, InputAdornment, CircularProgress } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { LightPurpleButton } from '../utils/buttonStyles';
-import { authUser, googleAuth, googleLoginUser } from '../redux/userHandle';
+import { authUser } from '../redux/userHandle';
 import styled from 'styled-components';
 import Popup from '../components/Popup';
-import jwt_decode from 'jwt-decode';
+
 import GoogleLogin from '../GoogleLogin';
 
 const AuthenticationPage = ({ mode, role }) => {
