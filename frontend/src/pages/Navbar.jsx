@@ -247,18 +247,14 @@ const Navbar = () => {
                             >
                                 <MenuItem onClick={() => navigate("/Customerlogin")}>
                                     <Avatar />
-                                    <Link to="/Customerlogin">
-                                        Sign in as customer
-                                    </Link>
+                                    Sign in as customer
                                 </MenuItem>
                                 <Divider />
                                 <MenuItem onClick={() => navigate("/Sellerlogin")}>
                                     <ListItemIcon>
                                         <Store fontSize="small" />
                                     </ListItemIcon>
-                                    <Link to="/Sellerlogin">
-                                        Sign in as seller
-                                    </Link>
+                                    Sign in as seller
                                 </MenuItem>
                             </Menu>
                         </Box>
