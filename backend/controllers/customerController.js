@@ -158,13 +158,6 @@ const cartUpdate = async (req, res) => {
 };
 
 
-// ✅ Google SignIn / SignUp (Unified)
-// ------------------------------
-
-
-// ------------------------------
-// ✅ Export All
-// ------------------------------
 module.exports = {
     customerRegister,
     customerLogIn,
